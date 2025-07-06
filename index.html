@@ -9,8 +9,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="general.css">
 </head>
 <body>
+     <label class="hamburger">
+      <input type="checkbox" />
+        <svg viewBox="0 0 32 32" aria-label="Mobile menu toggle">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5
+           10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2
+           18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+  </label>
+
+  <!-- Navigation Menu -->
+    <nav class="mobile-nav">
+        <div class="logo-1">
+            <p>MEDBINICE</p>
+        </div>
+
+        <div class="mobile-container">
+            <div class="contact-social-container">
+                <div class="nav-contact">
+                    <div class="no-email">
+                        <p class="contact-number"  style="width: 5.8rem">514-903-4455</p>
+                        <a href="mailto:shilohegbuji874@gmail.com" class="contact-email" style="width: 4rem;">Email Us</a>
+                    </div>
+                </div>
+            
+                <div class="social-links-2">
+                    <a href="">LinkedIn</a>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                </div>
+            </div>
+
+            <div class="nav-links-container">
+                <ul class="nav-list">
+                    <li><a onclick="location.href=`./index.html`">Home</a></li>
+                    <li><a onclick="location.href=`./gallery.html`">Gallery</a></li>
+                    <li><a onclick="location.href=`./#about`">About Us</a></li>
+                    <li><a onclick="location.href=`./#contact`">Contact Us</a></li>
+                </ul>
+            </div>
+    </nav>
+
     <!-- Header & Navigation -->
     <header>
         <div class="container">
@@ -23,6 +66,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#" class="active">About</a></li>
                     <li><a href="#">Services</a></li>
+                    <li><a href="#">Treatments</a></li>
                     <li><a href="#">Testimonials</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -81,11 +125,11 @@
 
                     <div class="btn-container">
                         <a href="https://calendar.app.google/8ji1pbEDhQ82YRDL6" class="btn">Book Consultation <i class="fas fa-arrow-right"></i></a>
-                        <a href="#" class="btn">About Me <i class="fas fa-arrow-right"></i></a>
+                        <a href="about.html" class="btn">About Me <i class="fas fa-arrow-right"></i></a>
                     </div>   
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Jonathan Callister">
+                    <img src="images/WhatsApp Image 2025-07-06 at 16.50.26_6a15e06f.jpg" alt="Dr. Jonathan Callister">
                 </div>
             </div>
         </div>
@@ -359,10 +403,11 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="about.html">About Dr. Callister</a></li>
-                        <li><a href="#">Cancer Treatments</a></li>
-                        <li><a href="#">Patient Resources</a></li>
-                        <li><a href="#">Research & Publications</a></li>
+                        <li><a href="#">About Dr. Callister</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Treatments</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 
