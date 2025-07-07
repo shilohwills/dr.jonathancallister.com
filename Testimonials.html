@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories of Strength | Dr. Sarah Evans Oncology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d5c75;
+            --secondary: #17a2b8;
+            --accent: #5cb85c;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --mid-gray: #adb5bd;
+            --dark: #343a40;
+            --white: #ffffff;
+            --hope-green: #4caf93;
+            --hope-blue: #3a7ca5;
+            --soft-yellow: #f9d56e;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #fafafa;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--hope-blue));
+            color: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 28px;
+            margin-right: 10px;
+            color: var(--soft-yellow);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--white);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--soft-yellow);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(13, 92, 117, 0.85), rgba(58, 124, 165, 0.8)), url('https://images.unsplash.com/photo-1581595219318-4d9b05d0d0c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            animation: fadeInDown 1s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--soft-yellow);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: var(--transition);
+            border: 2px solid var(--soft-yellow);
+            animation: fadeIn 1.5s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-btn:hover {
+            background-color: transparent;
+            color: var(--soft-yellow);
+            transform: translateY(-3px);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 80px 0;
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, var(--hope-green), var(--hope-blue));
+        }
+
+        .mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-icon {
+            font-size: 3rem;
+            color: var(--hope-green);
+            margin-bottom: 20px;
+        }
+
+        .mission h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .mission p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        .mission-quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--hope-blue);
+            margin: 40px 0;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .mission-quote::before, .mission-quote::after {
+            content: "";
+            font-size: 4rem;
+            position: absolute;
+            color: rgba(76, 175, 147, 0.2);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .mission-quote::before {
+            top: -20px;
+            left: 0;
+        }
+
+        .mission-quote::after {
+            bottom: -50px;
+            right: 0;
+            transform: rotate(180deg);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, var(--light), #eef7fa);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--hope-green);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background-color: transparent;
+            border: 2px solid var(--hope-blue);
+            color: var(--hope-blue);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--hope-blue);
+            color: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-header {
+            background: linear-gradient(to right, var(--hope-green), var(--hope-blue));
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .patient-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .patient-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .patient-details {
+            flex: 1;
+        }
+
+        .patient-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .patient-meta {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .cancer-type {
+            background-color: rgba(255,255,255,0.2);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-body {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 25px;
+            flex: 1;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .testimonial-quote::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -15px;
+            font-size: 4rem;
+            color: var(--light-gray);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--mid-gray);
+        }
+
+        .testimonial-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .testimonial-location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Video Testimonial */
+        .video-testimonial {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #eef7fa, var(--white));
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            background-color: var(--dark);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--hope-blue), var(--hope-green));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .play-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .play-icon i {
+            font-size: 30px;
+            margin-left: 5px;
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1);
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .video-info {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .video-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .video-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .trust-card {
+            padding: 30px 20px;
+            border-radius: 10px;
+            transition: var(--transition);
+            background-color: var(--light);
+            border: 1px solid var(--light-gray);
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            color: var(--hope-green);
+            margin-bottom: 20px;
+        }
+
+        .trust-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .trust-card p {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(13, 92, 117, 0.9), rgba(58, 124, 165, 0.9)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--soft-yellow);
+            color: var(--primary);
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: var(--transition);
+            border: 2px solid var(--soft-yellow);
+        }
+
+        .cta-btn.secondary {
+            background-color: transparent;
+            color: var(--soft-yellow);
+            border: 2px solid var(--soft-yellow);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        .cta-btn.secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: var(--hope-green);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .sticky-cta:hover {
+            background-color: var(--hope-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--hope-green);
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            margin-top: 5px;
+            color: var(--hope-green);
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--light-gray);
+            margin-bottom: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .affiliations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .affiliation-badge {
+            background-color: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--white);
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: var(--hope-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: var(--light-gray);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+
+            .video-placeholder {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                margin: 0;
+                text-align: center;
+            }
+            
+            nav a {
+                display: block;
+                padding: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-placeholder {
+                height: 300px;
+            }
+
+            .cta-title {
+                font-size: 2.2rem;
+            }
+
+            .cta-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky CTA -->
+    <a href="#" class="sticky-cta" id="stickyCta">
+        <i class="fas fa-calendar-check"></i> Schedule a Consultation
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat logo-icon"></i>
+                <div class="logo-text">Dr. Sarah Evans Oncology</div>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#" class="active">Patient Stories</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stories of Strength and Healing</h1>
+            <p>Real journeys of hope, courage, and compassionate care from patients who have walked the path before you.</p>
+            <a href="#testimonials" class="hero-btn">Read Their Stories</a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <i class="fas fa-hands-helping mission-icon"></i>
+                <h2>Our Mission: Compassionate Cancer Care</h2>
+                <p>At the heart of our practice is a simple but profound belief: every patient deserves to be treated with dignity, compassion, and the highest standard of medical care. Dr. Sarah Evans and our entire team are dedicated to walking alongside you through every step of your journey.</p>
+                
+                <p class="mission-quote">"Patient voices are the most powerful testament to the care we provide. Their stories of resilience inspire us every day and guide our commitment to compassionate oncology."</p>
+                
+                <p>On this page, you'll find stories from our patients - real people who have faced cancer with courage and found hope through personalized treatment and unwavering support. Their experiences reflect the heart of our practice and the difference compassionate care can make.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Patient Experiences</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Stories</button>
+                <button class="filter-btn" data-filter="breast">Breast Cancer</button>
+                <button class="filter-btn" data-filter="lung">Lung Cancer</button>
+                <button class="filter-btn" data-filter="prostate">Prostate Cancer</button>
+                <button class="filter-btn" data-filter="lymphoma">Lymphoma</button>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-category="breast">
+                    <div class="testimonial-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">MR</div>
+                            <div class="patient-details">
+                                <div class="patient-name">Maria Rodriguez</div>
+                                <div class="patient-meta">
+                                    <span>Age 52</span>
+                                    <span class="cancer-type">Breast Cancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <p class="testimonial-quote">"Dr. Evans didn't just treat my cancer - she treated me as a whole person. When I was diagnosed, I felt my world was ending. But she walked me through each step with such compassion and expertise. Two years later, I'm cancer-free and living fully again."</p>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-date"><i class="far fa-calendar"></i> April 12, 2023</div>
+                            <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Portland, OR</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-category="lung">
+                    <div class="testimonial-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">JK</div>
+                            <div class="patient-details">
+                                <div class="patient-name">James Kim</div>
+                                <div class="patient-meta">
+                                    <span>Age 64</span>
+                                    <span class="cancer-type">Lung Cancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <p class="testimonial-quote">"After my lung cancer diagnosis, I was terrified. Dr. Evans took the time to explain everything in terms I could understand. Her personalized approach made all the difference. Today, I'm back to hiking with my grandchildren - something I thought I'd never do again."</p>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-date"><i class="far fa-calendar"></i> February 28, 2023</div>
+                            <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Vancouver, WA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-category="prostate">
+                    <div class="testimonial-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">RS</div>
+                            <div class="patient-details">
+                                <div class="patient-name">Robert Sullivan</div>
+                                <div class="patient-meta">
+                                    <span>Age 68</span>
+                                    <span class="cancer-type">Prostate Cancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <p class="testimonial-quote">"Dr. Evans' approach is different. She listens - really listens. When I expressed concerns about treatment side effects, she worked tirelessly to find a solution that preserved my quality of life. Her compassion and expertise gave me hope during my darkest days."</p>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-date"><i class="far fa-calendar"></i> January 15, 2023</div>
+                            <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Beaverton, OR</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card" data-category="lymphoma">
+                    <div class="testimonial-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">EP</div>
+                            <div class="patient-details">
+                                <div class="patient-name">Emily Patterson</div>
+                                <div class="patient-meta">
+                                    <span>Age 34</span>
+                                    <span class="cancer-type">Lymphoma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <p class="testimonial-quote">"Being diagnosed with lymphoma at 32 was devastating. Dr. Evans became more than my oncologist - she became my champion. Her holistic approach addressed not just my physical health, but my emotional wellbeing too. Today, I'm in remission and planning for the future."</p>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-date"><i class="far fa-calendar"></i> November 3, 2022</div>
+                            <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Portland, OR</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card" data-category="breast">
+                    <div class="testimonial-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">AW</div>
+                            <div class="patient-details">
+                                <div class="patient-name">Aisha Williams</div>
+                                <div class="patient-meta">
+                                    <span>Age 47</span>
+                                    <span class="cancer-type">Breast Cancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <p class="testimonial-quote">"From the moment I met Dr. Evans, I knew I was in caring hands. She explained my triple-negative breast cancer diagnosis with clarity and compassion. Her team supported me through chemotherapy with such kindness. Now, I'm celebrating two years cancer-free!"</p>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-date"><i class="far fa-calendar"></i> September 18, 2022</div>
+                            <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Gresham, OR</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card" data-category="lung">
+                    <div class="testimonial-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">TG</div>
+                            <div class="patient-details">
+                                <div class="patient-name">Thomas Green</div>
+                                <div class="patient-meta">
+                                    <span>Age 71</span>
+                                    <span class="cancer-type">Lung Cancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <p class="testimonial-quote">"Dr. Evans gave me more time with my family. When I was diagnosed with advanced lung cancer, other doctors were pessimistic. Dr. Evans offered innovative treatments and genuine hope. Her personalized care plan has kept my cancer stable for three years now."</p>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-date"><i class="far fa-calendar"></i> July 5, 2022</div>
+                            <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Lake Oswego, OR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonial -->
+    <section class="video-testimonial">
+        <div class="container">
+            <h2 class="section-title">A Journey of Hope</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">David's Story: Finding Strength Through Treatment</div>
+                        <div class="video-subtitle">Colon Cancer Survivor | Treated by Dr. Evans</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Why Patients Trust Dr. Evans</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <i class="fas fa-user-md trust-icon"></i>
+                    <h3>20+ Years Experience</h3>
+                    <p>Board-certified oncologist with specialized expertise in multiple cancer types.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fas fa-heart trust-icon"></i>
+                    <h3>Compassionate Approach</h3>
+                    <p>Treating the whole person, not just the disease, with genuine care and empathy.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fas fa-flask trust-icon"></i>
+                    <h3>Innovative Treatments</h3>
+                    <p>Access to cutting-edge therapies and clinical trials when appropriate.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fas fa-users trust-icon"></i>
+                    <h3>Supportive Team</h3>
+                    <p>Multidisciplinary team working together for your best possible outcome.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Begin Your Journey to Healing</h2>
+                <p class="cta-text">If you or a loved one has been diagnosed with cancer, we're here to provide the compassionate, expert care you deserve. Schedule a consultation with Dr. Evans today.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn">
+                        <i class="fas fa-calendar-check"></i> Request Appointment
+                    </a>
+                    <a href="#" class="cta-btn secondary">
+                        <i class="fas fa-phone-alt"></i> Call Our Office
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Healing Way, Suite 300<br>Portland, OR 97201</p>
+                        <p><i class="fas fa-phone-alt"></i> (503) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@drevansoncology.com</p>
+                        <p><i class="fas fa-fax"></i> (503) 123-4568</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">About Dr. Evans</a>
+                        <a href="#">Services & Treatments</a>
+                        <a href="#">Patient Resources</a>
+                        <a href="#">Patient Stories</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Affiliations</h3>
+                    <div class="affiliations">
+                        <span class="affiliation-badge"><i class="fas fa-star"></i> Board Certified</span>
+                        <span class="affiliation-badge">Hope Medical Center</span>
+                        <span class="affiliation-badge">American Oncology Society</span>
+                        <span class="affiliation-badge">Portland Cancer Alliance</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Dr. Sarah Evans Oncology. All rights reserved. | Compassionate Care Since 2010</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Accessibility Statement</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Sticky CTA
+        const stickyCta = document.getElementById('stickyCta');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+        
+        // Testimonial Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // Show/hide testimonials based on filter
+                testimonialCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe testimonial cards
+        document.querySelectorAll('.testimonial-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

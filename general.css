@@ -15,7 +15,7 @@
     display: none;
     cursor: pointer;
     position: fixed;
-    top: 20px;
+    top: 2px;
     right: 20px;
     z-index: 2000;
   }
@@ -299,7 +299,7 @@
     height: 80%;
   }
 
-  .logo P {
+  .logo-1 P {
     font-size : 2rem;
     position: absolute;
     top: 5%;
@@ -308,8 +308,8 @@
   .nav-list{
     padding: 0;
     position: absolute;
-    top: -7%;
-    left: 20%;
+    top: -3%;
+    left: 80%;
   }
 
   .nav-list li {
@@ -319,7 +319,7 @@
 
   .nav-list a {
     width: 100%;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 400;
   }
 
@@ -329,5 +329,11 @@
     gap: 0.5rem;
     width: 70px;
     margin-top: 30px;
+  }
+
+  .no-email p, 
+  .no-email a {
+    width: 100%;
+    font-size: 0.9rem;
   }
 }
