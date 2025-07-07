@@ -643,7 +643,7 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background-color: var(--hope-green);
+            background-color: #2c6fbb;
         }
 
         .footer-contact p {
