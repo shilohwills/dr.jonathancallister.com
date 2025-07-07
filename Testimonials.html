@@ -9,24 +9,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="general.css">
 </head>
 <body>
-    <!-- Sticky CTA -->
-    <a href="#" class="sticky-cta" id="stickyCta">
-        <i class="fas fa-calendar-check"></i> Schedule a Consultation
-    </a>
+    <label class="hamburger" style="top: 86px;">
+      <input type="checkbox" />
+        <svg viewBox="0 0 32 32" aria-label="Mobile menu toggle">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5
+           10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2
+           18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+  </label>
+
+  <!-- Navigation Menu -->
+    <!-- Navigation Menu -->
+    <nav class="mobile-nav">
+        <div class="logo-1">
+            <p>Dr. Jonathan Callister</p>
+        </div>
+
+        <div class="mobile-container">
+            <div class="contact-social-container">
+                <div class="nav-contact">
+                    <div class="no-email">
+                        <p class="contact-number"  style="width: 5.8rem">514-903-4455</p>
+                        <a href="mailto:shilohegbuji874@gmail.com" class="contact-email" style="width: 4rem;">Email Us</a>
+                    </div>
+                </div>
+            
+                <div class="social-links-2">
+                    <a href="">LinkedIn</a>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                </div>
+            </div>
+
+            <div class="nav-links-container">
+                <ul class="nav-list">
+                    <li><a onclick="location.href=`index.html`">Home</a></li>
+                    <li><a onclick="location.href=`about.html`">About</a></li>
+                    <li><a onclick="location.href=`service.html`">Services</a></li>
+                    <li><a onclick="location.href=`treatments.html`">Treatments</a></li>
+                    <li><a onclick="location.href=`Testimonials.html`">Testimonials</a></li>
+                    <li><a onclick="location.href=`contact.html`">Contact</a></li>
+                </ul>
+        </div>
+    </nav>
 
     <!-- Header -->
-    <header>
+    <header style="position: fixed; top: 0; height: 10vh;">
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-heartbeat logo-icon"></i>
-                <div class="logo-text">Dr. Sarah Evans Oncology</div>
+                <div class="logo-text">Dr. Jonathan Callister</div>
             </div>
             <nav>
-                <button class="mobile-menu-btn" id="menuToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
                 <ul id="navMenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -34,6 +72,8 @@
                     <li><a href="#" class="active">Patient Stories</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+
+                <a href="https://calendar.app.google/8ji1pbEDhQ82YRDL6" class="nav-btn">Book Consultation</a>
             </nav>
         </div>
     </header>
@@ -272,7 +312,7 @@
                 <p class="cta-text">If you or a loved one has been diagnosed with cancer, we're here to provide the compassionate, expert care you deserve. Schedule a consultation with Dr. Evans today.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#" class="cta-btn">
+                    <a href="https://calendar.app.google/8ji1pbEDhQ82YRDL6" class="cta-btn">
                         <i class="fas fa-calendar-check"></i> Request Appointment
                     </a>
                     <a href="#" class="cta-btn secondary">
@@ -331,5 +371,6 @@
     </footer>
 
     <script src="testimonials.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

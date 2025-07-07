@@ -1,6 +1,6 @@
         :root {
-            --primary: #0d5c75;
-            --secondary: #17a2b8;
+            --primary: #2c6fbb;
+            --secondary: #2c6fbb;
             --accent: #5cb85c;
             --light: #f8f9fa;
             --light-gray: #e9ecef;
@@ -44,9 +44,8 @@
 
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--hope-blue));
-            color: var(--white);
-            padding: 20px 0;
+            background-color: #ffffff;
+            color: var(--primary);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -68,13 +67,13 @@
         .logo-icon {
             font-size: 28px;
             margin-right: 10px;
-            color: var(--soft-yellow);
+            color: #2c6fbb;
         }
 
         .logo-text {
             font-size: 22px;
             font-weight: 700;
-            color: var(--white);
+            color: #2c6fbb;
         }
 
         nav ul {
@@ -125,6 +124,7 @@
             color: var(--white);
             padding: 100px 0;
             text-align: center;
+            margin-top: 90px;
         }
 
         .hero-content {
@@ -152,22 +152,22 @@
 
         .hero-btn {
             display: inline-block;
-            background-color: var(--soft-yellow);
-            color: var(--primary);
+            background-color: #2c6fbb;
+            color: white;
             padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 18px;
             transition: var(--transition);
-            border: 2px solid var(--soft-yellow);
+            border: 2px solid #2c6fbb;
             animation: fadeIn 1.5s ease;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .hero-btn:hover {
             background-color: transparent;
-            color: var(--soft-yellow);
+            color: white;
             transform: translateY(-3px);
         }
 
@@ -197,7 +197,7 @@
 
         .mission-icon {
             font-size: 3rem;
-            color: var(--hope-green);
+            color: #2c6fbb;
             margin-bottom: 20px;
         }
 
@@ -505,7 +505,7 @@
 
         .trust-icon {
             font-size: 2.5rem;
-            color: var(--hope-green);
+            color: #2c6fbb;
             margin-bottom: 20px;
         }
 
@@ -558,21 +558,19 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background-color: var(--soft-yellow);
-            color: var(--primary);
+            background-color: var(--primary);
+            color: white;
             padding: 16px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 18px;
             transition: var(--transition);
-            border: 2px solid var(--soft-yellow);
         }
 
         .cta-btn.secondary {
             background-color: transparent;
-            color: var(--soft-yellow);
-            border: 2px solid var(--soft-yellow);
+            border: 4px solid var(--primary);
         }
 
         .cta-btn:hover {
@@ -618,7 +616,7 @@
 
         /* Footer */
         footer {
-            background-color: var(--primary);
+            background-color: #17252a;
             color: var(--white);
             padding: 60px 0 30px;
         }
@@ -688,6 +686,23 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+        }
+
+        .nav-btn {
+            width: 200px;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background-color: #235a9e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 111, 187, 0.2);
         }
 
         .social-links {
