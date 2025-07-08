@@ -689,6 +689,8 @@
         }
 
         @media (max-width: 768px) {
+           
+
             .header-container {
                 padding: 15px;
             }
@@ -698,6 +700,7 @@
             }
             
             .hero {
+                margin-top: 90px;
                 padding: 70px 0;
             }
             
