@@ -109,9 +109,11 @@
 }
 
 .nav-list {
+  display: block;
   list-style: none;
   margin-right: 0;
   padding-right: 10rem;
+  background-color: none;
 }
 
 .social-links-2 {

@@ -50,6 +50,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: var(--shadow);
+            display: grid;
+            place-items: center;
         }
 
         .header-container {
@@ -77,18 +79,20 @@
             line-height: 1.2;
         }
 
-        nav ul {
+        #navMenu {
+            display: block;
             display: flex;
             list-style: none;
         }
 
-        nav li {
+        #navMenu li {
             margin-left: 30px;
+
         }
 
-        nav a {
+        #navMenu li a {
             text-decoration: none;
-            color: rgba(255,255,255,0.9);
+            color: black;
             font-weight: 500;
             font-size: 16px;
             transition: var(--transition);
@@ -96,11 +100,17 @@
             position: relative;
         }
 
-        nav a:hover {
+        @media (max-width: 768px) {
+            #navMenu {
+                display: none;
+            }
+        }
+
+        #navMenu li a:hover {
             color: var(--white);
         }
 
-        nav a.active::after {
+        #navMenu li a.active::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -874,3 +884,358 @@
                 justify-content: center;
             }
         }
+
+             html {
+        scroll-behavior: smooth;
+        overflow: auto;
+        -ms-overflow-style: none;  
+        scrollbar-width: none;  
+        }
+        
+    html::-webkit-scrollbar {
+        display: none;    
+    }
+   
+   /* DROP DOWN MENU AND HAMBURGER */
+  /* Hamburger Button */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 2px;
+    right: 20px;
+    z-index: 2000;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: #2c6fbb;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition:
+      stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hamburger input:checked + svg .line {
+    stroke: black;
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+  /* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1550px;
+  height: 75vh;
+  min-height: 65vh;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transform: translateY(-100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #2c6fbb;
+}
+
+.mobile-container {
+  display: flex;
+  position: absolute;
+  top: 22%;
+  right: 15%;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.contact-social-container{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.nav-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #2c6fbb;
+}
+
+.nav-list {
+  display: block;
+  list-style: none;
+  padding-right: 10rem;
+  background-color: transparent;
+}
+
+.nav-list li a {
+    margin-bottom: 0;
+}
+
+.social-links-2 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.social-links-2 a {
+  width: 65px;
+  color: #2c6fbb;
+  text-decoration: none;
+}
+
+.nav-list li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.no-email {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.no-email a {
+  color: #2c6fbb;
+  text-decoration: none;
+}
+
+.logo-1 {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  top: 10px;
+  z-index: 1000;
+  color: #2c6fbb;
+}
+
+.logo-1 P {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  font-size: 3rem;
+  display: inline-block;
+}
+
+/* Active States */
+.mobile-nav.active {
+  transform: translateY(0);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* AFTER STATES */
+.contact-number,
+.contact-email,
+.social-links-2 a {
+  cursor: pointer;
+  position: relative; /* This is required */
+  display: inline-block; /* Optional but helpful for inline elements like <a> */
+}
+
+.contact-email:after,
+.contact-number:after,
+.social-links-2 a:after {
+  width: 100%;
+  height: 1.5px;
+  background-color: #2c6fbb;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2em;
+  transform: scaleX(0);
+  transition: transform 300ms;
+  transition-timing-function: ease-out;
+  transform-origin: left;
+}
+
+.contact-email:hover:after,
+.contact-number:hover:after,
+.social-links-2 a:hover:after {
+  transform: scaleX(1);
+}
+
+/* NAV-LISTS ANIMATION */
+.nav-list a {
+  position: relative;
+  font-family: 'Inria Serif', 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: #2c6fbb;
+  padding-left: 0;
+  transition: 
+        padding-left 0.4s cubic-bezier(0.33, 1, 0.68, 1),
+        color 0.3s ease;
+  display: inline-block; /* Ensures smooth transitions */
+}
+
+/* Arrow styling (perfectly centered) */
+.nav-list li a::before {
+    content: '➮';
+    position: absolute;
+    left: -1.2em; /* Start position (hidden) */
+    top: 53%; /* Fine-tuned vertical alignment */
+    transform: translateY(-50%);
+    opacity: 0;
+    font-weight: 200;
+    transition: 
+        left 0.4s cubic-bezier(0.33, 1, 0.68, 1),
+        opacity 0.3s ease;
+    font-family: 'Hanken Grotesk', sans-serif; /* Clean arrow style */
+}
+
+/* Hover States */
+.nav-list li a:hover {
+    padding-left: 0.4em; /* Smooth right push */
+    color: #000 ;
+}
+
+.nav-list li a:hover::before {
+    left: -0.3em; /* Final arrow position */
+    opacity: 1;
+}
+
+/* Dim other links on hover */
+.nav-list:hover li:not(:hover) a {
+    color: #A3A3A3 !important;
+}
+
+@media  (max-width: 768px) {
+    .hamburger {
+        display: block; 
+        top: 85px;
+        left: 0;
+        width: 100%;
+        display: grid;
+        place-items: end;
+        padding-right: 5px;
+        background: rgba(255, 255, 255, 0.6); /* Light translucent */
+        backdrop-filter: blur(10px); /* Glass blur */
+        -webkit-backdrop-filter: blur(10px); 
+    }
+
+    .logo h1 {
+        margin-left: -10px;
+    }
+
+    /* DROP DOWN MENU AND HAMBURGER */
+  /* Hamburger Button */
+  .mobile-nav {
+    width: 100%;
+    max-width: 767px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .mobile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+  }
+
+  .contact-social-container {
+    position: absolute;
+    left: 21%;
+    bottom: 0;
+  }
+
+  .mobile-container {
+    height: 80%;
+  }
+
+  .logo-1 P {
+    font-size : 2rem;
+    position: absolute;
+    top: 5%;
+  }
+
+  .nav-list{
+    padding: 0;
+    position: absolute;
+    top: -3%;
+    left: 80%;
+    display: grid;
+    place-items: start;
+    background-color: transparent;
+  }
+
+  .nav-list li {
+    margin: 0;
+    margin-bottom: 5px;
+    width: 110px;
+  }
+
+  .nav-list li a {
+    padding: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .social-links-2 {
+    padding: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 70px;
+    margin-top: 30px;
+  }
+
+  .social-links-2 a {
+    padding: 0;
+  }
+
+  .no-email p, 
+  .no-email a {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0;
+  }
+}
