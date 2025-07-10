@@ -329,30 +329,40 @@
             <div class="contact-content">
                 <div class="contact-form-container">
                     <h3>Request a Consultation</h3>
-                    <form>
+                    <form id="contact-Form" action="https://formsubmit.co/dr.jonathancallister@gmail.com" method="POST">
+                        <!-- Add your form fields here -->
                         <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" name="name" placeholder="John Doe" required>
+                            <i class="fas fa-user input-icon"></i>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" name="email" placeholder="john@example.com" required>
+                            <i class="fas fa-envelope input-icon"></i>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" name="_subject" placeholder="How can we help?" required>
+                            <i class="fas fa-tag input-icon"></i>
                         </div>
+                        
                         <div class="form-group">
-                            <select required>
-                                <option value="">Select Cancer Type</option>
-                                <option>Breast Cancer</option>
-                                <option>Lung Cancer</option>
-                                <option>Prostate Cancer</option>
-                                <option>Colorectal Cancer</option>
-                                <option>Other</option>
-                            </select>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" name="message" placeholder="Type your message here..." required></textarea>
+                            <i class="fas fa-comment input-icon" style="top: 40px;"></i>
                         </div>
-                        <div class="form-group">
-                            <textarea placeholder="Briefly describe your concerns"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Submit Request</button>
+                        
+                        <!-- FormSubmit Settings -->
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://drjonathancallister.netlify.app/thanks.html">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your message! We'll get back to you soon.">
+                        
+                        <button type="submit" class="btn" data-aos="flip-in" data-aos-duration="1200">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <div id="formMessage" class="form-message"></div>
                     </form>
                 </div>
                 

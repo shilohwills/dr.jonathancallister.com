@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Message</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #39393c;            
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .thank-you-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .header {
+            background-color: #262628;
+            padding: 40px 20px;
+            color: white;
+        }
+        
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            animation: scaleIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .checkmark i {
+            font-size: 60px;
+            color: #262628;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .content h2 {
+            font-size: 2rem;
+            color: #262628;
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn i {
+            margin-right: 10px;
+        }
+        
+        .btn-home {
+            background-color: #262628;
+            color: white;
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+        }
+        
+        .btn-contact {
+            background: white;
+            color: #262628;
+            border: 2px solid #2575fc;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 117, 252, 0.5);
+        }
+        
+        .contact-info {
+            background: #f8f9ff;
+            padding: 30px;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: #262628;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .info-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-item i {
+            font-size: 2rem;
+            color: #262628;
+            margin-bottom: 15px;
+        }
+        
+        .info-item h4 {
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        .info-item p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .footer {
+            padding: 20px;
+            background: #333;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2.2rem; }
+            .header p { font-size: 1rem; }
+            .content { padding: 30px 20px; }
+            .content h2 { font-size: 1.6rem; }
+            .message { font-size: 1rem; }
+            .actions { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="header">
+            <div class="checkmark">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1>Thank You!</h1>
+            <p>We've received your message and will get back to you soon.</p>
+        </div>
+        
+        <div class="content">
+            <h2>Your Message is Important to Us</h2>
+            <p class="message">
+                Thank you for reaching out! We've successfully received your message and our team is already reviewing it. 
+                We strive to respond to all inquiries within 24-48 hours. In the meantime, feel free to explore more of our website 
+                or check out the resources below.
+            </p>
+            
+            <div class="actions">
+                <a onclick="location.href=`./index.html`" class="btn btn-home">
+                    <i class="fas fa-home"></i> Back to Homepage
+                </a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Other Ways to Reach Us</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Phone Support</h4>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Us</h4>
+                    <p>support@yourcompany.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Visit Our Office</h4>
+                    <p>123 Business Ave, Suite 100</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2023 Medbinice. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.header, .content, .contact-info');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = "0";
+                    el.style.animation = "fadeIn 0.8s forwards";
+                    el.style.animationDelay = `${index * 0.2}s`;
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
