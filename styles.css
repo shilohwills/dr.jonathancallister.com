@@ -760,6 +760,13 @@
             font-weight: 700;
             margin-bottom: 5px;
         }
+
+        .stat-number-1 {
+            color: var(--primary);
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
         
         .stat-text {
             color: var(--text);
