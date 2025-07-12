@@ -52,6 +52,9 @@
             box-shadow: var(--shadow);
             display: grid;
             place-items: center;
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
         }
 
         .header-container {
