@@ -626,7 +626,6 @@
         
         .video-thumbnail {
             height: 200px;
-            background: var(--gray);
             border-radius: 8px;
             display: flex;
             align-items: center;
